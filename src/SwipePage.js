@@ -1,3 +1,4 @@
+
 import RestaurantCard from './components/RestaurantCard'
 import { setConfiguration, Container, Row, Col } from 'react-grid-system';
 import Helmet from 'react-helmet'
@@ -33,6 +34,15 @@ export default function SwipePage() {
     marginBottom: "10px",
     borderRadius: "5px"
   }
+  
+  var BigR = [["Chipotle","Fast-food chain offering Mexican fare, including design-your-own burritos, tacos and bowls.","$" ],
+      ["Mc Donalds","Classic, long-running fast-food chain known for its burgers, fries and shakes.","$" ],
+      ["Olive Garden","Lively, family-friendly chain featuring Italian standards such as pastas and salads, with a full bar.","$$" ]
+      ,["Outback Steakhouse","Boisterous Australian-themed chain serving steaks, seafood and other hearty steakhouse fare.","$$" ],
+      ["Panda Express","Fast-food chain for Chinese standards, including some health-conscious options.","$" ],
+      ["Pizza Hut","Family-friendly chain known for its made-to-order pizzas.","$" ],
+      ["Red Lobster","Lively chain restaurant serving American seafood standards amid New England-themed decor.","$$" ]]
+      
 
 
   return (
@@ -55,6 +65,7 @@ export default function SwipePage() {
       <button style={buttonStyle}>no</button>
       </div>
       </center>
+
     </div>
     // <div style={groupStyle}>
     //   <Helmet>
