@@ -17,4 +17,5 @@ function App() {
   );
 }
 
+var food = "Pizza" 
 export default App;

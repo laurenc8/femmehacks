@@ -8,8 +8,9 @@ function MyComponent() {
     // Note: the empty deps array [] means
     // this useEffect will run once
     // similar to componentDidMount()
-    useEffect(() => {
-      fetch("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=chinese&key=AIzaSyB0mUdXc01qBhDULZ8G84ePiU7Y2j_8Cb8")
+    useEffect((food) => {
+      var url = getUrl("chinese")
+      fetch(url)
         .then(res => res.json())
         .then(
           (result) => {
@@ -25,6 +26,10 @@ function MyComponent() {
           }
         )
     }, [])
+
+    function getUrl (food){
+      return "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.957119,-75.199547&radius=1500&type=restaurant&keyword="+food+"&key=AIzaSyB0mUdXc01qBhDULZ8G84ePiU7Y2j_8Cb8"
+    }
   
     if (error) {
       return <div>Error: {error.message}</div>;
