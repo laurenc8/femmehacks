@@ -1,5 +1,5 @@
 import './App.css';
-import MyComponent from './api';
+import MyComponent from './API/api';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SwipePage from './SwipePage';
 import MatchesPage from './MatchesPage';
