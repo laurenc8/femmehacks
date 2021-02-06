@@ -54,13 +54,15 @@ export default function SwipePage() {
       <div className="swipe">
       <button style={buttonStyle}>yes</button>
       <div className="card">
+        {BigR.map( (restaurant,index) => (
+
         <RestaurantCard 
-          name = {results[0].name}
-          location = {results[0].location}
-          desc = {results[0].desc}
-          price = {results[0].price}
-          reviews = {results[0].reviews}
+          name = {restaurant[0]}
+          desc = {restaurant[1]}
+          price = {restaurant[2]}
         />
+        ))}
+        
       </div>
       <button style={buttonStyle}>no</button>
       </div>
