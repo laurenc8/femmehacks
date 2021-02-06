@@ -12,9 +12,11 @@ function App() {
         <Route exact path="/matches" component={MatchesPage} />
         <Route component={() => <Redirect to="/" />} />
       </Switch>
-      <MyComponent></MyComponent>
+      <MyComponent fooood = { "burgers"} />
+      <MyComponent fooood = { "chinese"} />
     </div>
   );
 }
 
+var food = "Pizza" 
 export default App;
