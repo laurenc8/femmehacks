@@ -1,40 +1,28 @@
-import React from "react";
+import React from 'react';
 import SeeReviews from './SeeReviews';
 
 const RestaurantCard = (props) => {
   const {name, location, image, desc, price, reviews} = props;
   const boxStyle = {
-    backgroundColor: "fdsae3",
-    height: 400,
-    borderRadius: "20px",
-    marginBottom: "50px",
-    fontSize: 12,
-    //padding: "20px"
-  }
-
-  const paddingStyle = {
-    textAlign: "center",
-    paddingTop: "10px",
+    height: '100%',
     paddingLeft: "20px",
-    paddingRight: "20px"
+    paddingRight: "20px",
+    backgroundColor: "#ffffff",
   }
   const imgStyle = {
-    width: "100%", 
+    width: "70%",
     maxHeight: 100,
     overFlow: "hidden",
-    objectFit: "cover",
+    // objectFit: "cover",
   }
-  
   return (
     <div style={boxStyle}>
-      <div style={boxStyle}>
-        <h2>{name}</h2>
-        <p>{location}</p>
-        <img style = {imgStyle} src = {image} alt = "Food!"></img>
-        <p>{desc}</p>
-        <p>{price}</p>
-        <SeeReviews reviews = {reviews}/>
-      </div>
+      <p style={{fontSize: '24px'}}>{name}</p>
+      <p style={{fontSize: '14px'}}>{location}</p>
+      <img style = {imgStyle} src = {image} alt = "Food!"></img>
+      <p style={{fontSize: '16px'}}>{desc}</p>
+      <p style={{fontSize: '18px'}}>{price}</p>
+      <SeeReviews reviews={reviews}/>
     </div> 
   );
 }
