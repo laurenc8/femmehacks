@@ -1,4 +1,5 @@
 import './App.css';
+import MyComponent from './api';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import SwipePage from './SwipePage';
 import MatchesPage from './MatchesPage';
@@ -11,8 +12,10 @@ function App() {
         <Route exact path="/matches" component={MatchesPage} />
         <Route component={() => <Redirect to="/" />} />
       </Switch>
+      <MyComponent></MyComponent>
     </div>
   );
 }
 
 export default App;
+
