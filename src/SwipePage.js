@@ -20,13 +20,29 @@ export default function SwipePage() {
   //   borderRadius: "20px",
   //   marginBottom: "10px"
   // }
+  const groupStyle={
+    backgroundColor: "#f3e7e7",
+    padding: "10px"
+  }
+  const buttonStyle = {
+    backgroundColor: "#d1d7ef",
+    fontSize: 16,
+    height: 30,
+    width: 90,
+    marginTop: "10px",
+    marginBottom: "10px",
+    borderRadius: "5px"
+  }
 
 
   return (
-    <>
+    <div style={groupStyle}>
+    <center>
       <div className="header">
         <h1>YUMBBLE</h1>
       </div>
+      <div className="swipe">
+      <button style={buttonStyle}>yes</button>
       <div className="card">
         <RestaurantCard 
           name = {results[0].name}
@@ -36,7 +52,10 @@ export default function SwipePage() {
           reviews = {results[0].reviews}
         />
       </div>
-    </>
+      <button style={buttonStyle}>no</button>
+      </div>
+      </center>
+    </div>
     // <div style={groupStyle}>
     //   <Helmet>
     //       <style>{'body { background-color: #C8E1EF; }'}</style>

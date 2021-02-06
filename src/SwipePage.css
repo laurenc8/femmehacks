@@ -4,8 +4,25 @@
     align-items: center;
 }
 
+#swipe {
+    display:flex;
+    flex-direction: row;
+}
 .card {
+    display:flex;
+    flex-direction:row;
+    width: 35%;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
+}
+
+.button {
+    background-color: "#3f63aa";
+    color: "#ffffff";
+    font-size: 18 px;
+    height: 40 px;
+    width: 180 px;
+    margin-bottom: "10px";
+    border-radius: "5px"
 }
