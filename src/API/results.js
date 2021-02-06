@@ -18,5 +18,5 @@ const store3 = {
   desc: 'desc3', 
   price: '$$$'
 }
-
+// const results = [store1, store2, store3]
 export const results = [store1, store2, store3]
