@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch, Redirect, Link } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import SwipePage from './SwipePage';
 import MatchesPage from './MatchesPage';
 

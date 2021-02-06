@@ -1,7 +1,9 @@
+import RestaurantCard from './components/RestaurantCard'
+
 function MatchesPage() {
   return (
     <div>
-      Matches!
+      <RestaurantCard/>
     </div>
   );
 }
