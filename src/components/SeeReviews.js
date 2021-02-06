@@ -6,14 +6,11 @@ import {
 import "react-popupbox/dist/react-popupbox.css"
 
 class SeeReviews extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: this.props.reviews};
-  }
-  openPopupbox() {
+  openPopupbox(review = this.props.reviews) {
+    console.log(review)
     const content = (
       <div>
-        {this.state.value}
+        Yay!
       </div>
     )
     PopupboxManager.open({ content })
@@ -21,7 +18,6 @@ class SeeReviews extends Component {
 
   render() {
     const popupboxConfig = {
-
       fadeIn: true,
       fadeInSpeed: 500
     }

@@ -26,13 +26,15 @@ const RestaurantCard = (props) => {
   }
   
   return (
-    <div style={paddingStyle}>
-      <h2>{name}</h2>
-      <p>{location}</p>
-      <img style = {imgStyle} src = {image} alt = "Food!"></img>
-      <p>{desc}</p>
-      <p>{price}</p>
-      <SeeReviews reviews = {reviews}/>
+    <div style={boxStyle}>
+      <div style={boxStyle}>
+        <h2>{name}</h2>
+        <p>{location}</p>
+        <img style = {imgStyle} src = {image} alt = "Food!"></img>
+        <p>{desc}</p>
+        <p>{price}</p>
+        <SeeReviews reviews = {reviews}/>
+      </div>
     </div> 
   );
 }
