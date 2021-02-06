@@ -31,12 +31,7 @@ function MatchesPage() {
           <Row>
             {results.map((store, ind) => (
               <Col sm={4}>
-                <RestaurantCard
-                  name = "store"
-                  location = "Penn, US"
-                  desc = "This is a really good restaurant, and you should totally come here. We have lots of different food!"
-                  price = "$$$$"
-                />
+                <RestaurantCard store = { store } />
                 </Col>
             ))}
           </Row>
