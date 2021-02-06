@@ -25,8 +25,8 @@ function MatchesPage() {
           <style>{'body { background-color: #C8E1EF; }'}</style>
       </Helmet>
      
-        <h1>Find Goals</h1>
-        <button style={createButtonStyle}>+ Create a Goal</button>
+        <h1>YUMBBLE</h1>
+        <button style={createButtonStyle}>YUMBBLE</button>
         <Container>
           <Row>
             {results.map((store, ind) => (
