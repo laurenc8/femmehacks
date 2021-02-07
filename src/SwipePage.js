@@ -53,6 +53,9 @@ export default function SwipePage() {
             </button>
           </div>
         </div>
+        <form method="get" action="/matches">
+          <button style={buttonStyle} type="submit">See Matches</button>
+        </form>
       </center>
     </div>
   );
