@@ -57,7 +57,7 @@ export default function SwipePage() {
         <h1>YUMBBLE</h1>
       </div>
       <div className="swipe">
-      <button style={buttonStyle}>yes</button>
+      
       <div className="card">
       <RestaurantCard 
           name = {card.name}
@@ -83,6 +83,9 @@ export default function SwipePage() {
       </div>
       
       </div>
+      <form method="get" action="/matches">
+        <button type="submit">See Matches</button>
+        </form>
       </center>
 
     </div>

@@ -12,8 +12,6 @@ function App() {
         <Route exact path="/matches" component={MatchesPage} />
         <Route component={() => <Redirect to="/" />} />
       </Switch>
-      <MyComponent fooood = { "burgers"} />
-      <MyComponent fooood = { "chinese"} />
     </div>
   );
 }
