@@ -21,6 +21,16 @@ export default function SwipePage() {
     marginBottom: "10px",
     borderRadius: "5px"
   }
+  const buttonStyle2 = {
+    backgroundColor: "#3f63aa",
+    color: "#ffffff",
+    fontSize: 18,
+    height: 40,
+    width: 180,
+    marginTop: "10px",
+    marginBottom: "10px",
+    borderRadius: "5px"
+  }
   const [state, setState] = useState({index: 0, preferences: []});
 
   var BigR = [
@@ -54,7 +64,7 @@ export default function SwipePage() {
           </div>
         </div>
         <form method="get" action="/matches">
-          <button style={buttonStyle} type="submit">See Matches</button>
+          <button style={buttonStyle2} type="submit">Match!</button>
         </form>
       </center>
     </div>
