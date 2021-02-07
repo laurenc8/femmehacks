@@ -19,7 +19,7 @@ const RestaurantCard = (props) => {
     <div style={boxStyle}>
       <p style={{fontSize: '24px'}}>{name}</p>
       <p style={{fontSize: '14px'}}>{location}</p>
-      <img style = {imgStyle} src = {image} alt = "Food!"></img>
+      
       <p style={{fontSize: '16px'}}>{desc}</p>
       <p style={{fontSize: '18px'}}>{price}</p>
       <SeeReviews reviews={reviews}/>

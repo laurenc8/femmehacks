@@ -4,6 +4,7 @@ import { setConfiguration, Container, Row, Col } from 'react-grid-system';
 import Helmet from 'react-helmet'
 import { results } from './API/results'
 import "./SwipePage.css"
+import {useState} from 'react'
 
 
 export default function SwipePage() {
@@ -34,15 +35,19 @@ export default function SwipePage() {
     marginBottom: "10px",
     borderRadius: "5px"
   }
+  const [card, SetCard] = useState({name:"Chipotle",desc:"Fast-food chain offering Mexican fare, including design-your-own burritos, tacos and bowls.", price: "$"});
+
+
+  var BigR = [
+      ["Mc Donalds","Classic, long-running fast-food chain known for its burgers, fries and shakes.","$","fast food"],
+      ["Olive Garden","Lively, family-friendly chain featuring Italian standards such as pastas and salads, with a full bar.","$$", "italian" ]
+      ,["Outback Steakhouse","Boisterous Australian-themed chain serving steaks, seafood and other hearty steakhouse fare.","$$","steak" ],
+      ["Panda Express","Fast-food chain for Chinese standards, including some health-conscious options.","$", "panda Express"],
+      ["Pizza Hut","Family-friendly chain known for its made-to-order pizzas.","$","pizza"],
+      ["Red Lobster","Lively chain restaurant serving American seafood standards amid New England-themed decor.","$$", "seafood" ]]
   
-  var BigR = [["Chipotle","Fast-food chain offering Mexican fare, including design-your-own burritos, tacos and bowls.","$" ],
-      ["Mc Donalds","Classic, long-running fast-food chain known for its burgers, fries and shakes.","$" ],
-      ["Olive Garden","Lively, family-friendly chain featuring Italian standards such as pastas and salads, with a full bar.","$$" ]
-      ,["Outback Steakhouse","Boisterous Australian-themed chain serving steaks, seafood and other hearty steakhouse fare.","$$" ],
-      ["Panda Express","Fast-food chain for Chinese standards, including some health-conscious options.","$" ],
-      ["Pizza Hut","Family-friendly chain known for its made-to-order pizzas.","$" ],
-      ["Red Lobster","Lively chain restaurant serving American seafood standards amid New England-themed decor.","$$" ]]
-      
+  var foodtypes = []
+
 
 
   return (
@@ -54,17 +59,29 @@ export default function SwipePage() {
       <div className="swipe">
       <button style={buttonStyle}>yes</button>
       <div className="card">
-        {BigR.map( (restaurant,index) => (
-
-        <RestaurantCard 
-          name = {restaurant[0]}
-          desc = {restaurant[1]}
-          price = {restaurant[2]}
+      <RestaurantCard 
+          name = {card.name}
+          desc = {card.desc}
+          price = {card.price}
         />
+        
+        {BigR.map( (restaurant,index) => (
+        <div>
+        <button onClick= {() => "foodtypes.push(restaurant[3]); SetCard({name:restaurant[0], desc: restaurant[1],price:restaurant[2]})"
+  }>
+          yes
+        </button>
+        <button onClick={() => SetCard({name:restaurant[0], desc: restaurant[1],price:restaurant[2]})}>
+          No
+        </button>
+        
+        </div>
         ))}
+
+        
         
       </div>
-      <button style={buttonStyle}>no</button>
+      
       </div>
       </center>
 
